@@ -1,6 +1,6 @@
 // Keeps Mikey Mitchell's Lesson Plans working with no internet after the first visit.
 // Always tries the internet first (so updates show up right away) and uses the saved copy when offline.
-const CACHE = 'mikey-lessons-app-20261117204316';
+const CACHE = 'mikey-lessons-app-20261117205136';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
